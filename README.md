@@ -74,11 +74,11 @@ Submission of the results will consist of TXT files with one line per predicted 
 			      others (11))
    
       <truncation>	      The score in the DETECTION file should be set to the constant -1.
-                              The score in the GROUNDTRUTH file indicates the degree of object parts appears outside a frame 
+                          The score in the GROUNDTRUTH file indicates the degree of object parts appears outside a frame 
 			      (i.e., no truncation = 0 (truncation ratio 0%), and partial truncation = 1 (truncation ratio 1% ～ 50%)).
 	
       <occlusion>	      The score in the DETECTION file should be set to the constant -1.
-                              The score in the GROUNDTRUTH file indicates the fraction of objects being occluded 
+                          The score in the GROUNDTRUTH file indicates the fraction of objects being occluded 
 			      (i.e., no occlusion = 0 (occlusion ratio 0%), partial occlusion = 1 (occlusion ratio 1% ～ 50%), 
 			      and heavy occlusion = 2 (occlusion ratio 50% ~ 100%)).
 
