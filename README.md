@@ -94,8 +94,8 @@ References
 Version history
 
 1.0.1 - Apr 25, 2018
-  - Fixes bugs of the index of groundtruth and detections
-  - Included display of groundtruth and detections
+  - Some bugs of the index of groundtruth and detection results are fixed.
+  - The display function of groundtruth and detection results are included.
 
 1.0.0 - Apr 19, 2018
-  - initial release
+  - Initial release.
