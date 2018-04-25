@@ -10,6 +10,21 @@ The code is tested on the Windows 10 and macOS Sierra 10.12.6 systems, with the 
 
 If you have any questions, please contact us (email:tju.drone.vision@gmail.com).
 
+Citation
+
+If you use our toolkit or dataset, please cite our paper as follows:
+
+@article{zhuvisdrone2018,
+
+    title={Vision Meets Drones: A Challenge},
+
+    author={Zhu, Pengfei and Wen, Longyin and Bian, Xiao and Haibin, Ling and Hu, Qinghua},
+
+    journal={arXiv preprint:1804.07437},
+
+    year={2018}
+
+}
 
 Dataset
 
@@ -18,10 +33,10 @@ and test-challenge data. There is no overlap between the three sets.
 
                                          Number of snippets
     ---------------------------------------------------------------------------------------	 
-    Dataset           Training              Validation            Test-Challenge
+    Dataset                   Training              Validation            Test-Challenge
     ---------------------------------------------------------------------------------------
-    VID                56 clips               7 clips                33 clips
-                     24,201 frames          2,819 frames           12,968 frames
+    Detection in videos       56 clips               7 clips                 33 clips
+                             24,201 frames          2,819 frames           12,968 frames
     ---------------------------------------------------------------------------------------
     
 The challenge requires a participating algorithm to locate the target bounding boxes in each video frame. We focus on ten object categories of interest including pedestrian, person, car, van, bus, truck, motor, bicycle, awning-tricycle, and tricycle. We manually annotate the bounding boxes of different objects and ignored regiones in each video frame. Annotations on the training and validation sets are publicly available.
@@ -37,10 +52,11 @@ The notes for the folders:
 
 * main functions
 
-	* calcAccuracy.m is the main function to evaluate your detector
+	* evalVID.m is the main function to evaluate your detector
 	
-	-modify the dataset path and result path    
-    
+	  -modify the dataset path and result path
+	  -use "isSeqDisplay" to display the groundtruth and detections 
+	  
 
 VID submission format
 
@@ -82,7 +98,7 @@ Submission of the results will consist of TXT files with one line per predicted 
 			      (i.e., no occlusion = 0 (occlusion ratio 0%), partial occlusion = 1 (occlusion ratio 1% ～ 50%), 
 			      and heavy occlusion = 2 (occlusion ratio 50% ~ 100%)).
 
-The sample submission of the detector can be found in our website.
+The detections in the ignored regions and labeled as "others" will be not considered in the evaluation. The sample submission of the detector can be found in our website.
 
 References
 
