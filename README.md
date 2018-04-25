@@ -55,7 +55,7 @@ The notes for the folders:
 	* evalVID.m is the main function to evaluate your detector
 	
 	  -modify the dataset path and result path
-	  -use "isSeqDisplay" to display the groundtruth and detections 
+          -use "isSeqDisplay" to display the groundtruth and detections 
 	  
 
 VID submission format
