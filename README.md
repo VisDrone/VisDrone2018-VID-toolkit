@@ -31,14 +31,14 @@ Dataset
 For VID competition, there are three sets of data and labels: training data, validation data, 
 and test-challenge data. There is no overlap between the three sets. 
 
-                                         Number of snippets
-    ---------------------------------------------------------------------------------------	 
-    Dataset                   Training              Validation            Test-Challenge
-    ---------------------------------------------------------------------------------------
-    Detection in videos       56 clips               7 clips                 33 clips
-                             24,201 frames          2,819 frames           12,968 frames
-    ---------------------------------------------------------------------------------------
-    
+                                                         Number of snippets
+    ----------------------------------------------------------------------------------------------
+    Dataset                            Training              Validation            Test-Challenge
+    ----------------------------------------------------------------------------------------------
+    Object detection in videos       56 clips                  7 clips               16 clips
+                                  24,201 frames              2,819 frames         6,333 frames
+    ----------------------------------------------------------------------------------------------
+
 The challenge requires a participating algorithm to locate the target bounding boxes in each video frame. We focus on ten object categories of interest including pedestrian, person, car, van, bus, truck, motor, bicycle, awning-tricycle, and tricycle. We manually annotate the bounding boxes of different objects and ignored regiones in each video frame. Annotations on the training and validation sets are publicly available.
 
 The link for downloading the data can be obtained by registering for the challenge at
