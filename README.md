@@ -99,7 +99,7 @@ References
 
 [2] T. Lin, M. Maire, S. J. Belongie, J. Hays, P. Perona, D. Ramanan, P. Dollar, and C. L. Zitnick, "Microsoft COCO: common objects in context", in ECCV 2014.
 
-Version history
+Version History
 
 1.0.2 - Apr 27, 2018
 The nms function is included.
