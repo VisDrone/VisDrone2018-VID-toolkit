@@ -1,4 +1,4 @@
-function [AP_all, AP_50, AP_75, AR_1, AR_10, AR_100, AR_500] = calcAccuracy(numSeqs, allgt, alldet)
+function [AP, AR, AP_all, AP_50, AP_75, AR_1, AR_10, AR_100, AR_500] = calcAccuracy(numSeqs, allgt, alldet)
 %% claculate average precision and recall over all 10 IoU thresholds (i.e., [0.5:0.05:0.95]) of all object categories
 AP = zeros(10, 10);
 AR = zeros(10, 10, 4);
@@ -7,6 +7,7 @@ for idClass = 1:10
     disp(['evaluating object category ' num2str(idClass) '/10...'])    
     x = 0;
     for thr = 0.5:0.05:0.95
+        disp(['evaluating IOU threshold ' num2str(x+1) '/10...'])    
         x = x + 1;
         y = 0;
         for maxDets = [1 10 100 500]

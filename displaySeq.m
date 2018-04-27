@@ -1,7 +1,7 @@
 function displaySeq(seqPath, numSeqs, nameSeqs, allgt, alldet, isSeqDisplay) 
 %% show the groundtruth and detection results
 if(isSeqDisplay)
-    for idSeq = 1:numSeqs
+    for idSeq = 2%1:numSeqs
         dataset = dir(fullfile(seqPath, nameSeqs{idSeq}(1:end-4), '*.jpg'));
         gt = allgt{idSeq};
         det = alldet{idSeq};
