@@ -48,10 +48,11 @@ Evaluation Routines
 The notes for the folders:
 
 evalVID.m is the main function to evaluate your detector 
-  -modify the dataset path and result path 
-  -use "isSeqDisplay" to display the groundtruth and detections
-  -use "isNMS" and nmsThre to conduct NMS
-VID submission format
+  * modify the dataset path and result path 
+  * use "isSeqDisplay" to display the groundtruth and detections
+  
+  
+VID Submission Format
 
 Submission of the results will consist of TXT files with one line per predicted object.It looks as follows:
 
