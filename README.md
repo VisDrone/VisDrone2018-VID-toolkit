@@ -108,7 +108,7 @@ The annotations in ignored regions are not considered.
 
 1.0.1 - Apr 25, 2018
 
-Some bugs of the index of groundtruth and detection results are fixed.
+Some bugs in the indexes of groundtruth and detection results are fixed.
 The display function of groundtruth and detection results are included.
 1.0.0 - Apr 19, 2018
 
