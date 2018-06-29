@@ -1,11 +1,9 @@
 clc;
 clear all;close all;
-warning off; %#ok<WNOFF>
+warning off all;
 addpath('utils');
 
 isSeqDisplay = false; % flag to display the groundtruth and detections
-isNMS = true; % flag to conduct NMS
-nmsThre = 0.6; % threshold of NMS
 
 datasetPath = '..\VisDrone2018-VID-test-challenge\'; % dataset path
 resPath = '..\Faster-RCNN_results-test-challenge\'; % result path
@@ -16,7 +14,7 @@ nameSeqs = findSeqList(gtPath); % sequence list
 numSeqs = length(nameSeqs); % number of sequences
 
 % process the annotations and groundtruth
-[allgt, alldet] = saveAnnoRes(gtPath, resPath, seqPath, numSeqs, nameSeqs, isNMS, nmsThre);
+[allgt, alldet] = saveAnnoRes(gtPath, resPath, seqPath, numSeqs, nameSeqs);
 
 % show the groundtruth and detection results
 displaySeq(seqPath, numSeqs, nameSeqs, allgt, alldet, isSeqDisplay);
