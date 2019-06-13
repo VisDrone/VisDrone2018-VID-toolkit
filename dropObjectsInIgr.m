@@ -16,14 +16,14 @@ for fr = 1:numFr
         igrMap = zeros(imgHeight, imgWidth);
         numIgr = size(igrRegion,1);
         for j = 1:numIgr
-            igrMap(igrRegion(j,2):min(imgHeight,igrRegion(j,2)+igrRegion(j,4)),igrRegion(j,1):min(imgWidth,igrRegion(j,1)+igrRegion(j,3))) = 1;
+            igrMap(igrRegion(j,2)+1:min(imgHeight,igrRegion(j,2)+1+igrRegion(j,4)),igrRegion(j,1)+1:min(imgWidth,igrRegion(j,1)+1+igrRegion(j,3))) = 1;
         end
         intIgrMap = createIntImg(double(igrMap));
         idxLeft = [];
         for i = 1:size(curgt, 1)
             pos = max(1,round(curgt(i,3:6)));
-            x = max(1, min(imgWidth, pos(1)));
-            y = max(1, min(imgHeight, pos(2)));
+            x = max(1, min(imgWidth, pos(1)+1));
+            y = max(1, min(imgHeight, pos(2)+1));
             w = pos(3);
             h = pos(4);
             tl = intIgrMap(y, x);
@@ -36,12 +36,12 @@ for fr = 1:numFr
             end
         end
         
-        curdet = curdet(idxLeft, :);
+        curgt = curgt(idxLeft, :);
         idxLeft = [];
         for i = 1:size(curdet, 1)
             pos = max(1,round(curdet(i,3:6)));
-            x = max(1, min(imgWidth, pos(1)));
-            y = max(1, min(imgHeight, pos(2)));
+            x = max(1, min(imgWidth, pos(1)+1));
+            y = max(1, min(imgHeight, pos(2)+1));
             w = pos(3);
             h = pos(4);
             tl = intIgrMap(y, x);
