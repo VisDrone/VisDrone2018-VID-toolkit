@@ -102,6 +102,10 @@ References
 
 Version History
 
+1.0.4 - Jul 22, 2019
+
+The bugs in removing ground-truth in ignored regions are fixes.
+
 1.0.3 - Jun 29, 2018
 
 The nms function is removed to avoid confusion.
