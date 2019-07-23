@@ -11,7 +11,7 @@ for fr = 1:numFr
     curdet = det(idxDetFr,:);    
     % parse ignored regions
     idxIgr = gt(:,1) == fr & gt(:, 8) == 0;
-    igrRegion = gt(idxIgr, 3:6);
+    igrRegion = max(1, gt(idxIgr, 3:6));
     if(~isempty(igrRegion))
         igrMap = zeros(imgHeight, imgWidth);
         numIgr = size(igrRegion,1);
@@ -35,8 +35,8 @@ for fr = 1:numFr
                 idxLeft = cat(1, idxLeft, i);
             end
         end
+        curgt = curgt(idxLeft, :);
         
-        curdet = curdet(idxLeft, :);
         idxLeft = [];
         for i = 1:size(curdet, 1)
             pos = max(1,round(curdet(i,3:6)));
